@@ -26,6 +26,15 @@
 # else:
 #     print('품절되었습니다')
 
-재고=['K5', 'BMW', 'Tico']
-if 'K5' in 재고:
-    print('주문 가능합니다.')
+# 재고=['K5', 'BMW', 'Tico']
+# if 'K5' in 재고:
+#     print('주문 가능합니다.')
+
+#반복문
+
+for i in range(1,7,2):
+    print(i)
+
+중고차들=['BMW', 'Tico', 'K5']
+for i in 중고차들:
+    print(i)
