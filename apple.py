@@ -32,9 +32,34 @@
 
 #반복문
 
-for i in range(1,7,2):
-    print(i)
+# for i in range(1,7,2):
+#     print(i)
+#
+# 중고차들=['BMW', 'Tico', 'K5']
+# for i in 중고차들:
+#     print(i)
 
-중고차들=['BMW', 'Tico', 'K5']
-for i in 중고차들:
-    print(i)
+def solution(numbers):
+    answer = []
+    for i in range(len(numbers)):
+        a=numbers
+        count = 0
+
+        for j in range(i+1, len(a)):
+            if a[i]<a[j]:
+                answer.append(a[j])
+                break
+            else:
+                count+=1
+                print(a[j], j,i, count)
+                if count==len(a)-(i+1):
+                    answer.append(-1)
+                    break
+
+        if a[i] == a[-1]:
+            answer.append(-1)
+    print(answer)
+    return answer
+
+re=list(map(int, input().split()))
+solution(re)
